@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+enum enOddOrEven{odd=1,even=2};
+int readnum()
+{
+	int n;
+	cout << "enter n ";
+	cin >> n;
+	return n;
+}
+enOddOrEven checknum(int n)
+{
+	if (n % 2 != 0)
+		return enOddOrEven::odd;
+	else
+		return enOddOrEven::even;
+}
+int PrintResultUsingFor(int n)
+{
+	int sum = 0;
+	cout << "sum odd numbers using for loop ";
+	for (int i = 1; i <= n; i++)
+	{
+		if (checknum(i) == enOddOrEven::even)
+		{
+			sum += i;
+		}
+	}
+	return sum;
+}
+int PrintResultUsingWhile(int n)
+{
+	int sum = 0;
+	int i = 1;
+	cout << "sum odd numbers using while ";
+	while ( i <= n)
+	{
+		if (checknum(i) == enOddOrEven::even)
+		{
+			sum += i;
+		}
+		i++;
+	}
+	return sum;
+}
+int PrintResultUsingDoWhile(int n)
+{
+	int sum = 0;
+	int i = 1;
+	cout << "sum odd numbers using do while ";
+	do
+	{
+		if (checknum(i) == enOddOrEven::even)
+		{
+			sum += i;
+		}
+		i++;
+	} while (i <= n);
+	return sum;
+}
+int main()
+{
+	int n = readnum();
+	cout<<PrintResultUsingFor(n) <<endl;
+	cout<<PrintResultUsingWhile(n) <<endl;
+	cout << PrintResultUsingDoWhile(n) << endl;
+}

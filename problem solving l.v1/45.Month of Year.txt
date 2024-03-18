@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+enum enmonthyear { jan = 1, feb = 2, mar = 3, apr = 4, may = 5, jun = 6, jul = 7, aug = 8, sep = 9, oct = 10, nov = 11, dec = 12 };
+int readpositivenumber(string message,int from,int to)
+{
+	int num = 0;
+	do {
+		cout << message << endl;
+		cin >> num;
+	} while (num < from || num > to);
+	return num;
+}
+enmonthyear readmonth()
+{
+	return(enmonthyear)readpositivenumber("enter day number ", 1, 12);
+}
+string getmonth(enmonthyear month)
+{
+	switch (month)
+	{
+	case enmonthyear::jan:
+		return"jan";
+	case enmonthyear::feb:
+		return"feb";
+	case enmonthyear::mar:
+		return"mar";
+	case enmonthyear::apr:
+		return"apr";
+	case enmonthyear::may:
+		return"may";
+	case enmonthyear::jun:
+		return"jun";
+	case enmonthyear::jul:
+		return"jul";
+	case enmonthyear::aug:
+		return"aug";
+	case enmonthyear::sep:
+		return"sep";
+	case enmonthyear::oct:
+		return"oct";
+	case enmonthyear::nov:
+		return"nov";
+	case enmonthyear::dec:
+		return"dec";
+		return "not avalid week";
+	}
+}
+int main()
+{
+	cout<<getmonth(readmonth());
+}

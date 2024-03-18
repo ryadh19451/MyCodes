@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+struct stduration 
+{
+	int days, hours, minutes, seconds;
+};
+int readpositivenum(string message)
+{
+	int num = 0;
+	do {
+		cout << message << endl;
+		cin >> num;
+	} while (num <= 0);
+	return num;
+}
+stduration readnum()
+{
+	stduration task;
+	task.days = readpositivenum("enter days ");
+	task.hours= readpositivenum("enter hours ");
+	task.minutes= readpositivenum("enter nimutes ");
+	task.seconds = readpositivenum("enter seconds ");
+	return task;
+}
+int printnum(stduration task)
+{
+	int duration = 0;
+	duration = task.days * 24 * 60 * 60;
+	duration += task.hours * 60 * 60;
+	duration += task.minutes * 60;
+	duration += task.seconds;
+	return duration;
+}
+int main()
+{
+	cout << "seconds is " << printnum(readnum());
+}

@@ -1,0 +1,38 @@
+وضع write mode
+نضغ fstream Myfile;
+Myfile.open("Myfile.txt", ios::out);
+if (Myfile.is_open())
+if(Myfile.is_open())
+{
+cout<<"fsdfs"<<endl;
+Myfile.close();
+}
+وضع append mode
+نضع Myfile.open("Myfile.txt", ios::out | ios::app);
+
+Myfile<<"dsdgdsg<<endl;
+
+وضع read mode
+Myfile.open("Myfile.txt", ios::in);
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+void PrintFileContent(string FilName)
+{
+	fstream Myfile;
+	Myfile.open("Myfile.txt", ios::in);
+	if (Myfile.is_open())
+	{
+		string Line;
+		while (getline(Myfile, Line))
+		{
+			cout << Line << endl;
+		}
+		Myfile.close();
+	}
+}
+int main()
+{
+	PrintFileContent("Mydile.txt");
+}

@@ -1,0 +1,33 @@
+v#include <iostream>
+using namespace std;
+int readnum()
+{
+	int num;
+	cout << "enter number ";
+	cin >> num;
+	return num;
+}
+int readpower()
+{
+	int m;
+	cout << "enter power ";
+	cin >> m;
+	return m;
+}
+int powerOf(int num,int m)
+{
+	if (m == 0)
+	{
+		return 1;
+	}
+	int p = 1;
+	for (int i=1; i<= m; i++)
+	{
+			p = p * num;
+	}
+	return p;
+}
+int main()
+{
+	cout<<"result is " << powerOf(readnum(), readpower());
+}

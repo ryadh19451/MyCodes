@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+struct stinfo
+{
+	int age;
+	bool DriverLicense;
+};
+stinfo ReadInfo()
+{
+	stinfo info;
+	cout << "Enter age ";
+	cin >> info.age;
+	cout << "do you have driver license ";
+	cin >> info.DriverLicense;
+	return info;
+}
+bool CheckHired(stinfo info)
+{
+	return (info.age > 21 && info.DriverLicense);
+}
+void PrintResult(stinfo info)
+{
+	if (CheckHired(info))
+		cout << "Hired";
+	else
+		cout << "Rejected";
+}
+int main()
+{
+	PrintResult(ReadInfo());
+}

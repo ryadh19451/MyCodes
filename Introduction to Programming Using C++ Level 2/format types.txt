@@ -1,0 +1,9 @@
+int format:
+%d
+float and double format:
+%.3f
+%.*f
+string format
+%s
+char format
+%*c

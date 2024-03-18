@@ -1,0 +1,6 @@
+toupper(convert to uppercase)
+tolower(convert to lowercase)
+isupper(check uppercase)
+islower(checklowercase)
+isdigit(check digit)
+is punct(check punct)//*-+=

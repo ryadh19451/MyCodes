@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int readpositivenum(string message)
+{
+	int num = 0;
+	do
+	{
+		cout << message << num;
+		cin >> num;
+	} while (num <= 0);
+	return num;
+}
+float totalamount(float loanamount, float totalmonths)
+{
+	return (float)loanamount / totalmonths;
+}
+int main()
+{
+	float loanamount = readpositivenum("enter loan amount ");
+	float totalmonths= readpositivenum("enter months ");
+	cout << "total amount " << totalamount(loanamount, totalmonths);
+}

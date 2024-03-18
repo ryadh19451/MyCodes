@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+struct stinfo
+{
+	string firstname;
+	string lastname;
+};
+stinfo readinfo()
+{
+	stinfo info;
+	cout<<"enter first name ";
+	cin>>info.firstname;
+	cout<<"enter last name ";
+	cin>>info.lastname;
+	return info;
+}
+string getfullname(stinfo info)
+{
+	string fullname="";
+	fullname=info.firstname+" "+info.lastname;
+	return fullname;
+}
+void printinfo(string fullname)
+{
+	cout<<"your name is "<<fullname;
+}
+int main()
+{
+    printinfo(getfullname(readinfo()));
+}

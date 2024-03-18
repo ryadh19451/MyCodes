@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+void readnum(int &num1,int &num2,int &num3)
+{
+	cout << "enter number1 ";
+	cin >> num1;
+	cout << "enter number2 ";
+	cin >> num2;
+	cout << "enter number3 ";
+	cin >> num3;
+}
+int calculatenum(int num1,int num2,int num3)
+{
+	int sum;
+	sum = num1 + num2 + num3;
+	return sum;
+}
+float calcaverage(int num1,int num2,int num3)
+{
+	return (float)calculatenum(num1,num2,num3)/3;
+}
+void prinresult(int average)
+{
+	cout <<average;
+}
+int main()
+{
+	int num1, num2, num3;
+	readnum(num1, num2, num3);
+	prinresult(calcaverage(num1, num2, num3));
+}

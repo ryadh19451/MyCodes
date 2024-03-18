@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+void readnum(float &a,float &h)
+{
+	cout<<"enter a ";
+	cin>>a;
+	cout<<"enter h ";
+	cin>>h;
+}
+float calcnum(float a,float h)
+{
+	return a/2*h;
+}
+void printresult(float result)
+{
+	cout<<"result is "<<result;
+}
+int main()
+{
+	float a,b;
+	readnum(a,b);
+	printresult(calcnum(a,b));
+}

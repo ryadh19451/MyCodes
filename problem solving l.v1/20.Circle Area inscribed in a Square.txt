@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+float readnum()
+{
+	float a;
+	cout<<"enter a ";
+	cin>>a;
+	return a;
+}
+float circlearea(float a)
+{
+	const float pi=3.141592653589793238;
+	float area=(pi*pow(a,2))/4;
+	return area;
+}
+void printresult(float result)
+{
+	cout<<"result is "<<result;
+}
+int main()
+{
+	printresult(circlearea(readnum()));
+}

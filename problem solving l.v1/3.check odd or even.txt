@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+enum CheckOddOrEven{Odd=1,Even=2};
+int Readnum()
+{
+	int num;
+	cout << "Enter number ";
+	cin >> num;
+	return num;
+}
+CheckOddOrEven CheckNum(int num)
+{
+	if (num % 2 == 0)
+		return CheckOddOrEven::Even;
+	else
+		return CheckOddOrEven::Odd;
+}
+void Printnum(int num)
+{
+	if (CheckNum(num) == CheckOddOrEven::Odd)
+		cout << "number is odd";
+	else
+		cout << "number is even";
+}
+int main()
+{
+	Printnum(Readnum());
+}

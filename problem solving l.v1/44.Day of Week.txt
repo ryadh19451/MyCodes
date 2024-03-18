@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+enum enweekday{ sunday = 1, monday = 2, tuesday = 3, wedenesday = 4, thursday = 5, friday = 6, saturday = 7 };
+int readpositivenumber(string message,int from,int to)
+{
+	int num = 0;
+	do {
+		cout << message << endl;
+		cin >> num;
+	} while (num < from || num > to);
+	return num;
+}
+enweekday readday()
+{
+	return(enweekday)readpositivenumber("enter day number ",1,7);
+}
+string getday(enweekday day)
+{
+	switch (day)
+	{
+	case enweekday::sunday:
+		return"sunday";
+	case enweekday::monday:
+		return"monday";
+	case enweekday::tuesday:
+		return"tuesday";
+	case enweekday::wedenesday:
+		return"wedensday";
+	case enweekday::thursday:
+		return"thursday";
+	case enweekday::friday:
+		return"friday";
+	case enweekday::saturday:
+		return"saturday";
+	default:
+		return "not avalid day";
+	}
+}
+int main()
+{
+	cout<<getday(readday());
+}

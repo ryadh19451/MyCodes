@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int ReadPositiveNumber(string message)
+{
+	int n;
+	do
+	{
+		cout << message;
+		cin >> n;
+	} while (n < 0);
+	return n;
+}
+int FactorialOfN(int n)
+{
+	int result = 1;
+	for (int i = n; i >= 1; i--)
+	{
+		result = result * i;
+	}
+	return result;
+}
+int main()
+{
+	int n;
+	cout<<FactorialOfN(ReadPositiveNumber("Enter N "))<<endl;
+}

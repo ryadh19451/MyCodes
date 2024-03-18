@@ -1,0 +1,5 @@
+syntax is:
+true        false
+Condition?Expression:expression
+mark=50
+mark>50?"Pass":"Fail";

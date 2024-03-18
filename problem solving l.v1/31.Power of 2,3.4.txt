@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int readnum()
+{
+	int num;
+	cout << "enter number ";
+	cin >> num;
+	return num;
+}
+void powerOf(int num)
+{
+	cout << num<<endl;
+	cout << num * num<<endl;
+	cout << num * num * num<<endl;
+}
+int main()
+{
+	powerOf(readnum());
+}

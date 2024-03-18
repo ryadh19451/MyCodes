@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+struct stmoney
+{
+	int penny;
+	int nickel;
+	int dime;
+	int quarter;
+	int dollar;
+};
+stmoney readmoney()
+{
+	stmoney money;
+	cout << "enter pennies ";
+	cin >> money.penny;
+	cout << "enter nickels ";
+	cin >> money.nickel;
+	cout << "enter dimes ";
+	cin >> money.dime; 
+	cout << "enter quarters ";
+	cin >> money.quarter;
+	cout << "enter dollars ";
+	cin >> money.dollar;
+	return money;
+}
+int checkmoney(stmoney money)
+{
+	int Totalpennies = 0;
+	Totalpennies = money.penny + (money.nickel * 5) + (money.dime * 10) + (money.quarter * 25) + (money.dollar * 100);
+	return Totalpennies;
+}
+int main()
+{
+	int Totalpennies = checkmoney(readmoney());
+	cout << "Totalpennies is " << Totalpennies << endl;
+	cout << "Totaldollars is " << (float)Totalpennies/100 << endl;
+}

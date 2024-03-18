@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+float readradious()
+{
+	float r;
+	cout<<"enter r ";
+	cin>>r;
+	return r;
+}
+float circlearea(float r)
+{
+	const float pi=3.141592653589793238;
+	float area=pow(r,2)*pi;
+	return area;
+}
+void printresult(float result)
+{
+	cout<<"result is "<<result;
+}
+int main()
+{
+	printresult(circlearea(readradious()));
+}

@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+void readnum(float &a,float &b)
+{
+	cout << "enter a ";
+	cin >> a;
+	cout << "enter b ";
+	cin >> b;
+}
+float circlearea(float a, float b)
+{
+	const float pi = 3.141592653589793238;
+	float area = (pi * (pow(b, 2) / 4)) * ((2 * a - b) / (2 * a + b));
+	return area;
+}
+void printresult(float result)
+{
+	cout << "result is " << result;
+}
+int main()
+{
+	float a,b;
+	readnum(a,b);
+	printresult(circlearea(a,b));
+}

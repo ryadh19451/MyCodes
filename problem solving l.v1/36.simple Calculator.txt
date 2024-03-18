@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+enum operationtype{add='+',subtract='-',multiply='*',divide='/'};
+float readnum(string message)
+{
+	float num;
+	cout<<message;
+	cin >>num;
+	return num;
+}
+operationtype readotype()
+{
+	char type='+';
+	cout<<"enter operation type ";
+	cin>>type;
+	return (operationtype)type;
+}
+float calculate(float num1,float num2,operationtype type)
+{
+	switch(type)
+	{
+	case operationtype::add:
+	return num1+num2;
+	case operationtype::subtract:
+	return num1-num2;
+	case operationtype::multiply:
+	return num1*num2;
+	case operationtype::divide:
+	return num1/num2;
+	default:
+	return num1+num2;
+	}
+}
+int main()
+{
+	float num1=readnum("enter num1 ");
+	float num2=readnum("enter num2 ");
+	operationtype type=readotype();
+	cout<<"result is "<<calculate(num1,num2,type);
+}

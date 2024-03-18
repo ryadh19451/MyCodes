@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+void readnum(float& a, float& b, float& c)
+{
+	cout << "enter number 1 ";
+	cin >> a;
+	cout << "enter number2 ";
+	cin >> b;
+	cout << "enter number3 ";
+	cin >> c;
+}
+float calcnunm(float a, float b, float c)
+{
+	const float pi = 3.141592653589793238;
+	float p = (a + b + c) / 2;
+	float T = (a * b * c) / (4 * sqrt(p * (p - a) * (p - b) * (p - c)));
+	float area = pi * pow(T, 2);
+	return area;
+}
+void printresult(float area)
+{
+	cout << "result is " << area;
+}
+int main()
+{
+	float a, b, c;
+	readnum(a, b, c);
+	printresult(calcnunm(a, b, c));
+}

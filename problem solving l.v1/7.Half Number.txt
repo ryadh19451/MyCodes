@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+float readnum()
+{
+	float num;
+	cout<<"enter your number ";
+	cin>>num;
+	return num;
+}
+float calculatenum(int num)
+{
+	return (float)num/2;
+}
+void printresult(float num)
+{
+	string result="Half of "+to_string(num) +" is "+ to_string (calculatenum(num));
+	cout<<result;
+}
+int main()
+{
+    printresult(readnum());
+}

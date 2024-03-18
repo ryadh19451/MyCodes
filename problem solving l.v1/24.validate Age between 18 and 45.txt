@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int readage()
+{
+	int age;
+	cout << "enter age ";
+	cin >> age;
+	return age;
+}
+bool ValidateNamberInRange(int num, int from, int to)
+{
+	return (num >= from && num <= to);
+}
+void printresult(int age)
+{
+	if (ValidateNamberInRange(age, 18, 45))
+		cout << age<< " is a vaild age ";
+	else
+		cout << age<< " is invalid age ";
+}
+int main()
+{
+	printresult(readage());
+}

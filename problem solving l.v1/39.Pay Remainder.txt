@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+float readpositivenum(string message)
+{
+	float num=0;
+	do
+	{
+	cout<<message;
+	cin>>num;
+	}while(num<=0);
+	return num;
+}
+float calcnum(float totalbill,float cashpaid)
+{
+	return cashpaid -totalbill;
+}
+int main()
+{
+	float totalbill=readpositivenum("enter total bill ");
+	float cashpaid=readpositivenum("enter cash paid ");
+	cout<<endl;
+	cout<<"totalbill is "<<totalbill<<endl;
+	cout<<"cashpaid is "<<cashpaid<<endl;
+	cout<<"****************"<<endl;
+	cout<<"remainder is "<<calcnum(totalbill,cashpaid)<<endl;
+}
